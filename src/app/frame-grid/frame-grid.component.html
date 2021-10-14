@@ -1,0 +1,36 @@
+<div class='frame table-responsive'>
+    <table class='frame__table table'>
+        <thead>
+            <tr>
+                <th>Player:</th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+                <th>6</th>
+                <th>7</th>
+                <th>8</th>
+                <th>9</th>
+                <th>10</th>
+                <th>Score:</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="frame__table--body-name">Will Mann</td>
+                <td *ngFor="let bowlingFrame of bowlingFrames">
+                    <div class="frame__table--body-scores d-flex">
+                            <div [ngClass]="{'col-6': bowlingFrame.Frame !== 10, 'col-4': bowlingFrame.Frame == 10}">{{bowlingFrame.Roll1}}</div>
+                            <div [ngClass]="{'col-6': bowlingFrame.Frame !== 10, 'col-4': bowlingFrame.Frame == 10}">{{bowlingFrame.Roll2}}</div>
+                            <div *ngIf="bowlingFrame.Frame == 10" class="col-4">{{bowlingFrame.Roll3}}</div>
+                    </div>
+                    <div class="frame__table--body-score">
+                        {{bowlingFrame.Score}}
+                    </div>      
+                </td>
+                <td class="frame__table--finalScore">{{finalScore}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

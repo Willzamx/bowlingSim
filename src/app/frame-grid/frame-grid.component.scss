@@ -1,0 +1,47 @@
+.frame {
+    padding: 0px 10px;
+
+    &__table {
+        border: 1px solid black;
+        width: 100%;
+        border-spacing: 0px;
+        margin-top: 15px;
+        text-align: center;
+        
+
+        &--body {
+            &-name {
+                font-size: 25px;
+                font-weight: bold;
+                vertical-align: middle;
+            }
+
+            &-scores div {
+                border: 1px solid black;
+            }
+            &-score {
+                display: flex;
+                justify-content: center;
+                font-size: 30px;
+            }
+        }
+
+        &--finalScore {
+            font-size: 30px;
+            font-weight: bold;
+            vertical-align: middle;
+        }
+
+        th {
+            border: 1px solid black;
+            height: 50px;
+            font-size: 30px;
+        }
+        
+        td {
+            border: 1px solid black;
+            height: 50px;
+            padding: 0px;
+        }
+    }
+}

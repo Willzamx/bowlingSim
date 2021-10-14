@@ -1,0 +1,29 @@
+.bowling {
+    &__toolbar {
+        height: 100px;
+        background-color: #03c6fc;
+        display: flex;
+        justify-content: center;
+        place-items: flex-end;
+
+        &-text {
+            display: flex;
+            align-self: center;
+            font-size: 50px;
+            &--right {
+                justify-content: right;
+            }
+        }
+
+        &-logo {
+            width: 90px;
+            height: 90px;
+        }
+    }
+
+    &__score {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+}
